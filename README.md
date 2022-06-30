@@ -1,6 +1,6 @@
-#MLOps-PSET2
+# MLOps-PSET2
 
-##Problem Statement:
+## Problem Statement:
 Build an ML app with the following features in your code 
 * Should have the template from cookie cutter https://drivendata.github.io/cookiecutter-data-science/
 * Should have all the python files stored in proper directories  ( modularity )
