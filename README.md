@@ -27,9 +27,9 @@ Step 2:
     install DVC
     dvc init
     configure dvc:
-        dvc remote add origin https://dagshub.com/sashicds/MLOpsDagsHubDemo.dvc
+        dvc remote add origin https://dagshub.com/anibhush/MLOps-PSET2.dvc
         dvc remote modify origin --local auth basic
-        dvc remote modify origin --local user sashicds
+        dvc remote modify origin --local user anibhush
         dvc remote modify origin --local password $DAGSHUB_TOKEN
 
         dvc pull -r origin
@@ -37,3 +37,14 @@ Step 2:
         dvc push -r origin    
         
         
+Step 3:
+    install mlflow
+
+    # add the following in the python code!
+    mlflow.set_tracking_uri("https://dagshub.com/sashicds/MLOPS-Dagshub.mlflow")
+    tracking_uri = mlflow.get_tracking_uri()
+    print("Current tracking uri: {}".format(tracking_uri))
+
+    export MLFLOW_TRACKING_USERNAME=sashicds
+    export MLFLOW_TRACKING_PASSWORD=$DAGSHUB_TOKEN
+
