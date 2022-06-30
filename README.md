@@ -16,3 +16,24 @@ Your github URL of the repo and the URL of your deployed website on AWS or Azure
 
 Marking :
 The scoring for this assignment will be based on how effective the design methodologies are followed ( for CI and CD ) as mentioned in lectures.
+
+
+## Steps:
+Step 1:
+    Create Git repo
+    create DagsHub repo: https://dagshub.com and connect to the github repo
+
+Step 2:
+    install DVC
+    dvc init
+    configure dvc:
+        dvc remote add origin https://dagshub.com/sashicds/MLOpsDagsHubDemo.dvc
+        dvc remote modify origin --local auth basic
+        dvc remote modify origin --local user sashicds
+        dvc remote modify origin --local password $DAGSHUB_TOKEN
+
+        dvc pull -r origin
+        dvc add data/raw
+        dvc push -r origin    
+        
+        

@@ -1,0 +1,11 @@
+make
+pylint
+pytest-cov
+pandas
+numpy
+matplotlib
+dagshub
+dvc
+joblib
+scikit-learn
+mlflow
